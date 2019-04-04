@@ -1,0 +1,8 @@
+<h1>Teu Texto:</h1>
+{{fulltext}}
+<h2>Existem {{contar}} palavras no teu texto</h2>
+<a href="{% url 'home' %}">Comece de Novo!</a>
+<h2>Palavras no dicionário:</h2>
+{% for word,counttotal in sortedWord %}
+  {{word}} - {{counttotal}}<br />
+{% endfor %}
